@@ -7,7 +7,9 @@ const index = ({ datas }) => {
 export default index;
 
 export const getServerSideProps = async () => {
-  const datas = await fetch("/api/hello").then((res) => res.json());
+  const datas = await fetch("http://localhost:3000/api/hello").then((res) =>
+    res.json()
+  );
   return {
     props: {
       datas,
